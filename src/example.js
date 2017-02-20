@@ -1,7 +1,7 @@
 // this is mandatory for dependency injection within our unit tests
 import { window, Logger, helpers } from 'opendatalayer';
 
-const logger = new Logger('odl/plugins/testing');
+const logger = new Logger('opendatalayer-plugin-example');
 
 /**
  * Example ODL plugin
@@ -19,5 +19,9 @@ export default class Example {
     }
 
     helpers.addScript('//foo/bar/test.js');
+  }
+
+  handleEvent(name, data) {
+    logger.log('Event caught: ', name, data);
   }
 }

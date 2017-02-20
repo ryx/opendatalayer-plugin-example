@@ -5,10 +5,11 @@ import mockModule from 'systemjs-mock-module';
 import '../systemjs.config';
 
 describe('Example', () => {
-  let [Plugin, odlMock, odlDataMock, configMock] = [];
+  let [Plugin, odlMock, odlDataMock, configMock, loggerSpy] = [];
 
   beforeEach(() => {
     // ODL core API mock
+    loggerSpy = { log: sinon.spy() };
     odlMock = {
       window: {
         doSomething: sinon.spy(),
@@ -17,7 +18,7 @@ describe('Example', () => {
       helpers: {
         addScript: sinon.spy(),
       },
-      Logger: () => ({ log: sinon.spy() }),
+      Logger: () => loggerSpy,
     };
     // ODL global data mock
     odlDataMock = {
@@ -50,5 +51,11 @@ describe('Example', () => {
   it('should add the foobar script', () => {
     new Plugin(odlMock, odlDataMock, configMock);
     sinon.assert.calledWith(odlMock.helpers.addScript, '//foo/bar/test.js');
+  });
+
+  it('should recognize and handle a runtime event', () => {
+    const p = new Plugin(odlMock, odlDataMock, configMock);
+    p.handleEvent('foo', 'bar');
+    sinon.assert.calledWith(loggerSpy.log, sinon.match('Event caught:', 'foo', 'bar'));
   });
 });
