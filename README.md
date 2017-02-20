@@ -1,3 +1,5 @@
+[![build status](https://gitlab.gkh-setu.de/bsna/opendatalayer-plugin-example/badges/master/build.svg)](https://gitlab.gkh-setu.de/bsna/opendatalayer-plugin-example/commits/master)
+
 # OpenDataLayer Example Plugin
 Example plugin for OpenDataLayer, used as testbed and boilerplate for plugin development.
 
