@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/ryx/opendatalayer-plugin-example.svg?branch=master)](https://travis-ci.org/ryx/opendatalayer-plugin-example)
 
 # OpenDatalayer Example Plugin
-Example plugin for OpenDatalayer, used as testbed and boilerplate for plugin development.
+Example plugin for [OpenDatalayer](https://github.com/ryx/opendatalayer), used as testbed and boilerplate for plugin development.
 
 ## Info
 Build plugin as a CommonJS module into `./dist` with
