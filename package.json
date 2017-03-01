@@ -1,10 +1,10 @@
 {
   "name": "opendatalayer-plugin-example",
   "version": "0.0.1",
-  "description": "Example plugin for OpenDataLayer",
+  "description": "A simple example plugin for the OpenDatalayer framework",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.gkh-setu.de:bsna/opendatalayer-plugin-example.git"
+    "url": "https://github.com/ryx/opendatalayer-plugin-example"
   },
   "main": "dist/example.cjs.js",
   "scripts": {
