@@ -1,10 +1,10 @@
-[![build status](https://gitlab.gkh-setu.de/bsna/opendatalayer-plugin-example/badges/master/build.svg)](https://gitlab.gkh-setu.de/bsna/opendatalayer-plugin-example/commits/master)
+[![Build Status](https://travis-ci.org/ryx/opendatalayer-plugin-example.svg?branch=master)](https://travis-ci.org/ryx/opendatalayer-plugin-example)
 
-# OpenDataLayer Example Plugin
-Example plugin for OpenDataLayer, used as testbed and boilerplate for plugin development.
+# OpenDatalayer Example Plugin
+Example plugin for OpenDatalayer, used as testbed and boilerplate for plugin development.
 
 ## Info
-Build plugin as CommonJS module into `./dist` with
+Build plugin as a CommonJS module into `./dist` with
 
     npm build
 
